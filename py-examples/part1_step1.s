@@ -11,6 +11,9 @@
 main:
     addi a1, zero, 6 #num1 = 6
     addi a2, zero, 7 #num2 = 7
+    #jos jompikumpi on 0, skippaa
+    beqz a1, ohi
+    beqz a2, ohi
     j multiply
 
 multiply: bge t0, a2, ohi #define loop
