@@ -131,4 +131,4 @@ main:
     sw a0, 0(t1) #talletetaan tulos muistiin
 
     li a7, 10 # exit
-    ecal
+    ecall
