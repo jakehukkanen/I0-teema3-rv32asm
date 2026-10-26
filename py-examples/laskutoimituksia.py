@@ -47,4 +47,28 @@ def part1_step5():
         result = -result;
     print(result)
 
-part1_step5()
+def part1_step6():
+    num1 = int(input("Enter num1: "))
+    num2 = int(input("Enter num2: "))
+
+    num1_positive = (num1 >= 0)
+    num2_positive = (num2 >= 0)
+
+    result: int = 0
+    i: int = 0
+
+    if abs(num1) >= 1000 or abs(num2) >= 1000:
+        print("Please only enter numbers with an absolute value of less than 1000. Program will now exit.")
+        return
+
+    while i < abs(num2):
+        result += abs(num1)
+        i += 1
+
+    both_negative = not num1_positive and not num2_positive
+    result_negative = (not num1_positive and not both_negative) or (not num2_positive and not both_negative)
+    if result_negative:
+        result = -result;
+    print(result)
+
+part1_step6()
